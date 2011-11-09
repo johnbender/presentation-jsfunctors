@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>JS Functor</title>
+
+  <meta name="viewport" content="width=device-width"/>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+  <script type="text/javascript" src="./js/coffee-script.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+    <link rel="stylesheet" href="file/style.css" type="text/css"/>
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+      setupPreso(false, './');
+  });
+  </script>
+
+</head>
+
+<body>
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">z, ?</td><td>toggle help (this)</td></tr>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">shift-space, &larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>toggle debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c, t</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">n</td><td>toggle notes</td></tr>
+    <tr><td class="key">p</td><td>run preshow</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content title" ref="one/01_slide/1">
+<p>You got your typeclass in my jQuery</p>
+
+<h1>Functors</h1></div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/01_slide/2">
+<h2>me</h2>
+
+<ul>
+<li>@johnbender</li>
+<li>johnbender.us</li>
+<li>github.com/johnbender</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="one/01_slide/3">
+<p><img src="./file/one/adobe.jpg" style="max-height: 600px"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/01_slide/4">
+<h2>projects</h2>
+
+<ul>
+<li><img src="./file/one/jquery-logo.png" style="max-height: 100px"/></li>
+<li><img src="./file/one/vagrant_chilling.png" style="max-height: 250px;"/></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/5">
+<h1>why?</h1>
+
+<p><img src="./file/one/why.png"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/6">
+<h2>patterns</h2>
+
+<p><img src="./file/one/male-baldness.gif" style="height: 350px;"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/7">
+<h2>practical</h2>
+
+<p><img src="./file/one/digging.gif" style="height: 350px;"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/8">
+<h2>fun!</h2>
+
+<p><img src="./file/one/laughing.png"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/9">
+<h1>disclaimer</h1>
+
+<p><img src="./file/one/warning.jpg" style="height: 300px;"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/10">
+<h1>Haskell's functor</h1></div>
+</div><div class="slide" data-transition="none"><div class="content typeclass" ref="one/01_slide/11">
+<pre>
+<span class="keyword">class</span> <span class="type">Functor</span> f <span class="keyword">where</span>
+<span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> f b
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content highlighted-typeclass" ref="one/01_slide/12">
+<pre>
+<b>class Functor f where</b>
+<span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> f b
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content without-declaration" ref="one/01_slide/13">
+<pre>
+<span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> f b
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content highlighted-args" ref="one/01_slide/14">
+<pre>
+<span class="function-name">fmap</span> <span class="variable-name">::</span> <b>(a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a</b> <span class="variable-name">-&gt;</span> f b
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content highlighted-return" ref="one/01_slide/15">
+<pre>
+<span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> <b>f b</b>
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content highlighted-function-arg" ref="one/01_slide/16">
+<pre>
+<span class="function-name">fmap</span> <span class="variable-name">::</span> <b>(a -&gt; b)</b> <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> f b
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/17">
+<pre>
+<span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> <b>f a</b> <span class="variable-name">-&gt;</span> f b
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/18">
+<pre>
+<span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> <b>f</b> a <span class="variable-name">-&gt;</span> <b>f</b> b
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/19">
+<pre class="medium">
+<span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> functor a <span class="variable-name">-&gt;</span> functor b
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/20">
+<pre class="medium">
+<span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> functor(a) <span class="variable-name">-&gt;</span> functor(b)
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/01_slide/21">
+<h2>simple &amp; general</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/22">
+<p><img src="./file/one/jackie.png"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/23">
+<h1>Javascript's functor</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/24">
+<pre>
+<span class="comment">// ( a -&gt; b )
+</span><span class="keyword">var</span> <span class="function-name">fromAtoB</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
+  <span class="keyword">var</span> <span class="variable-name">b</span> = a.alter();
+  <span class="keyword">return</span> b;
+};
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/25">
+<pre class="large">
+<span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; f b
+</span><span class="keyword">var</span> <span class="variable-name">wrappedB</span> = fmap(fromAtoB, <span class="keyword">new</span> Functor(a));
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/26">
+<pre class="large">
+<span class="comment">// fmap :: <b>( a -&gt; b )</b> -&gt; f a -&gt; f b
+</span><span class="keyword">var</span> <span class="variable-name">wrappedB</span> = fmap(<b>fromAtoB</b>, <span class="keyword">new</span> Functor(a));
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/27">
+<pre class="large">
+<span class="comment">// fmap :: ( a -&gt; b ) -&gt; <b>f a</b> -&gt; f b
+</span><span class="keyword">var</span> <span class="variable-name">wrappedB</span> = fmap(fromAtoB, <b><span class="keyword">new</span> Functor(a)</b>);
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/28">
+<pre class="large">
+<span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; <b>f b</b>
+</span><span class="keyword">var</span> <b><span class="variable-name">wrappedB</span></b> = fmap(fromAtoB, <span class="keyword">new</span> Functor(a));
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/29">
+<pre class="large">
+<span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; f b</span>
+<span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
+  <span class="keyword">var</span> <span class="variable-name">a</span>, <span class="variable-name">b</span>;
+
+  <span class="comment">// get the value inside the functor object
+</span>  a = wrappedA.getInternalValue();
+
+  <span class="comment">// send that value into our function
+</span>  b = fromAToB(a);
+
+  <span class="comment">// re-wrap with a functor object and return
+</span>  <span class="keyword">return</span> <span class="keyword">new</span> Functor(b);
+};</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/30">
+<pre class="large">
+<span class="comment">// fmap :: ( a -&gt; b ) -&gt; <b>f a</b> -&gt; f b</span>
+<span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param"><b>wrappedA</b></span>){
+  <span class="keyword">var</span> <span class="variable-name">a</span>, <span class="variable-name">b</span>;
+
+  <span class="comment">// get the value inside the functor object
+</span>  a = <b>wrappedA</b>.getInternalValue();
+
+  <span class="comment">// send that value into our function
+</span>  b = fromAToB(a);
+
+  <span class="comment">// re-wrap with a functor object and return
+</span>  <span class="keyword">return</span> <span class="keyword">new</span> Functor(b);
+};</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/31">
+<pre class="large">
+<span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; f b</span>
+<span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
+  <span class="keyword">var</span> <span class="variable-name">a</span>, <span class="variable-name">b</span>;
+
+  <span class="comment">// get the value inside the functor object
+</span>  a = <b>wrappedA.getInternalValue()</b>;
+
+  <span class="comment">// send that value into our function
+</span>  b = fromAToB(a);
+
+  <span class="comment">// re-wrap with a functor object and return
+</span>  <span class="keyword">return</span> <span class="keyword">new</span> Functor(b);
+};</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/32">
+<pre class="large">
+<span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; f b</span>
+<span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
+  <span class="keyword">var</span> <span class="variable-name">a</span>, <span class="variable-name">b</span>;
+
+  <span class="comment">// get the value inside the functor object
+</span>  <b>a</b> = wrappedA.getInternalValue();
+
+  <span class="comment">// send that value into our function
+</span>  b = fromAToB(a);
+
+  <span class="comment">// re-wrap with a functor object and return
+</span>  <span class="keyword">return</span> <span class="keyword">new</span> Functor(b);
+};</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/33">
+<pre class="large">
+<span class="comment">// fmap :: ( <b>a</b> -&gt; b ) -&gt; f a -&gt; f b</span>
+<span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
+  <span class="keyword">var</span> <span class="variable-name">a</span>, <span class="variable-name">b</span>;
+
+  <span class="comment">// get the value inside the functor object
+</span>  a = wrappedA.getInternalValue();
+
+  <span class="comment">// send that value into our function
+</span>  b = fromAToB(<b>a</b>);
+
+  <span class="comment">// re-wrap with a functor object and return
+</span>  <span class="keyword">return</span> <span class="keyword">new</span> Functor(b);
+};</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/34">
+<pre class="large">
+<span class="comment">// fmap :: ( a -&gt; <b>b</b> ) -&gt; f a -&gt; f b</span>
+<span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
+  <span class="keyword">var</span> <span class="variable-name">a</span>, <span class="variable-name">b</span>;
+
+  <span class="comment">// get the value inside the functor object
+</span>  a = wrappedA.getInternalValue();
+
+  <span class="comment">// send that value into our function
+</span>  <b>b</b> = fromAToB(a);
+
+  <span class="comment">// re-wrap with a functor object and return
+</span>  <span class="keyword">return</span> <span class="keyword">new</span> Functor(b);
+};</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/35">
+<pre class="large">
+<span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; <b>f b</b></span>
+<span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
+  <span class="keyword">var</span> <span class="variable-name">a</span>, <span class="variable-name">b</span>;
+
+  <span class="comment">// get the value inside the functor object
+</span>  a = wrappedA.getInternalValue();
+
+  <span class="comment">// send that value into our function
+</span>  b = fromAToB(a);
+
+  <span class="comment">// re-wrap with a functor object and return
+</span>  <span class="keyword">return</span> <b><span class="keyword">new</span> Functor(b)</b>;
+};</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/36">
+<p><img src="./file/one/surprised.png"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/37">
+<h1>jQuery's functor</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/38">
+<pre>
+<span class="comment">// jQuery :: String -&gt; jQuery(a) </span>
+jQuery( <span class="string">"div.selectastic"</span> )
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/39">
+<pre>
+<span class="comment">// jQuery :: String -&gt; jQuery(a) </span>
+$( <span class="string">"div.selectastic"</span> )
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/40">
+<h2>a :: HTMLElement</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/41">
+<h2>jQuery &#x2248; Functor</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/42">
+<pre class="medium">
+$( <span class="string">"div"</span> ).map( <span class="keyword">function</span>( <span class="js2-function-param">i</span>, <span class="js2-function-param">elem</span> ){
+  <span class="comment">// elem :: HTMLElement
+</span>  <span class="keyword">return</span> elem;
+});
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/43">
+<pre class="medium">
+$( <span class="string">"div"</span> ).<b>map</b>( <span class="keyword">function</span>( <span class="js2-function-param">i</span>, <span class="js2-function-param">elem</span> ){
+  <span class="comment">// elem :: HTMLElement
+</span>  <span class="keyword">return</span> elem;
+});
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/44">
+<pre class="medium">
+<span class="comment">// $.map :: f a -&gt; (a -&gt; b) -&gt; f b</span>
+$.map($(<span class="string">"div"</span>), <span class="keyword">function</span>( <span class="js2-function-param">elem</span> ) {
+  <span class="comment">// elem :: HTMLElement
+</span>  <span class="keyword">return</span> elem;
+});</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/45">
+<pre class="medium">
+<span class="comment">// $.map :: f a -&gt; (a -&gt; b) -&gt; f b</span>
+$.<b>map</b>($(<span class="string">"div"</span>), <span class="keyword">function</span>( <span class="js2-function-param">elem</span> ) {
+  <span class="comment">// elem :: HTMLElement
+</span>  <span class="keyword">return</span> elem;
+});</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/46">
+<pre class="medium">
+<span class="comment">// $.fmap :: f a -&gt; (a -&gt; b) -&gt; f b</span>
+$.<b>fmap</b>($(<span class="string">"div"</span>), <span class="keyword">function</span>( <span class="js2-function-param">elem</span> ) {
+  <span class="comment">// elem :: HTMLElement
+</span>  <span class="keyword">return</span> elem;
+});
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/47">
+<pre class="medium">
+<span class="function-name">flip</span> fmap <span class="variable-name">::</span> f a <span class="variable-name">-&gt;</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f b</pre>
+</div>
+</div></div>
+
+</body>
+</html>
