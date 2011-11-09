@@ -1,0 +1,152 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.content h1 {
+  font-size: 6em;
+  background: #D65600;
+  color: white;
+  padding: 1em 0;
+}
+
+.content h2 {
+  font-size: 6em;
+  background: purple;
+  color: white;
+  padding: 0.25em 0;
+}
+
+h3 {
+  font-size: 5.5em;
+}
+
+.title p {
+  font-size: 3.0em;
+}
+
+#fixture a {
+  color: #333;
+  text-decoration: none;
+  font-size: 4em;
+}
+
+#qunit-feedback {
+  min-height: 200px;
+}
+
+body.example {
+  text-align: center;
+  padding-top: 20px;
+}
+
+body.example img {
+  min-width: 10%;
+  font-size: 20px;
+}
+
+body.example #qunit-feedback {
+  text-align: left;
+}
+
+span.monospace {
+  font-family: monospace;
+}
+
+.heart {
+  color: red;
+  font-size: 1.5em;
+}
+
+#jackie {
+  opacity: 0;
+}
+
+#jackie.opacity-animation {
+  -moz-transition: opacity 2s linear;
+	opacity: 1;
+}
+
+.content.intro h3 {
+  font-size: 3.01em;
+}
+
+/* code highlights */
+
+.content > pre.large {
+  font-size: 2.5em;
+}
+
+.content > pre.medium {
+  font-size: 2.7em;
+}
+
+.content > pre {
+  color: #333333;
+  padding: 10px;
+  margin: 0 40px 0 40px;
+  line-height: 1.4em;
+  font-size: 3.5em;
+}
+
+.content > pre b {
+  background: #D65600;
+  color: white;
+  outline: .20em solid #D65600;
+}
+
+.many-pre pre {
+  margin-bottom: 50px;
+  border-bottom: 3px dashed black;
+}
+
+.content > ul > li {
+  margin-left: 0;
+}
+
+.builtin {
+  /* font-lock-builtin-face */
+  color: #62124b;
+}
+.comment {
+  /* font-lock-comment-face */
+  color: #aea79f;
+  font-style: italic;
+}
+.function-name {
+  /* font-lock-function-name-face */
+  color: #860e73;
+  font-weight: bold;
+}
+.keyword {
+  /* font-lock-keyword-face */
+  color: #f47321;
+  font-weight: bold;
+}
+.string {
+  /* font-lock-string-face */
+  color: #dd1144;
+}
+.variable-name {
+  /* font-lock-variable-name-face */
+  color: #8b005a;
+}
+
+b .variable-name {
+  color: white;
+}
+
+.css-property {
+  /* css-property */
+  color: #8b005a;
+}
+.css-selector {
+  /* css-selector */
+  color: #860e73;
+  font-weight: bold;
+}
+
+.type {
+  /* font-lock-type-face */
+  color: #83a525;
+}
