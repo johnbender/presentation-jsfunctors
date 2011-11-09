@@ -31,6 +31,7 @@ You got your typeclass in my jQuery
 
 !SLIDE
 ## fun!
+<img src="laughing.png"></img>
 
 !SLIDE
 # disclaimer
