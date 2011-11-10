@@ -656,3 +656,12 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
   .hide()
   <b>.fmap(destroy)</b>;</pre>
 
+!SLIDE bullets
+<img src="pie.jpg" style="max-height: 400px"></img>
+
+!SLIDE bullets
+## thanks!
+* @johnbender
+* johnbender.us
+* github.com/johnbender
+
