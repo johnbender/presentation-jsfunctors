@@ -21,8 +21,12 @@ h3 {
   font-size: 5.5em;
 }
 
-.title p {
+.title h3 {
   font-size: 3.0em;
+}
+
+.title p {
+  font-size: 2.0em;
 }
 
 #fixture a {
@@ -72,9 +76,12 @@ span.monospace {
 }
 
 /* code highlights */
+.content > pre.xlarge {
+  font-size: 2em;
+}
 
 .content > pre.large {
-  font-size: 2.5em;
+  font-size: 2.4em;
 }
 
 .content > pre.medium {
