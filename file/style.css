@@ -148,3 +148,10 @@ b .variable-name {
   /* font-lock-type-face */
   color: #83a525;
 }
+
+.attribution h4 {
+  font-size: 1.0em;
+  margin: auto;
+  text-align: center;
+  font-weight: normal;
+}
