@@ -19,23 +19,25 @@ johnbender.github.com/presentation-jsfunctors/
 
 !SLIDE
 # why?
-<img src="why.png"></img>
 
 !SLIDE
 ## patterns
 <img src="male-baldness.gif" style="height: 350px;"></img>
-
 
 !SLIDE
 ## practical
 <img src="digging.gif" style="height: 350px;"></img>
 
 !SLIDE
-# &#9888;disclaimer&#9888;
+## tricks
+<img src="feynman.jpg" style="height: 350px"></img>
+
+!SLIDE
+# disclaimer
 <img src="warning.jpg" style="height: 300px;"></img>
 
 !SLIDE
-# Haskell's functor
+# haskell functor
 
 !SLIDE typeclass
 <pre>
@@ -106,7 +108,7 @@ johnbender.github.com/presentation-jsfunctors/
 <img src="questionmark.png"></img>
 
 !SLIDE
-# Javascript's functor
+# javascript functor
 
 !SLIDE
 <pre>
@@ -255,7 +257,7 @@ johnbender.github.com/presentation-jsfunctors/
 };</pre>
 
 !SLIDE
-<img src="surprised.png"></img>
+<img src="questionmark.png"></img>
 
 !SLIDE
 # jQuery's functor
@@ -341,13 +343,15 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 </pre>
 
 !SLIDE
-<img src="jackie.png"></img>
+<img src="questionmark.png"></img>
 
 !SLIDE
-# Hidden functor
+# hidden functor
+<img src="hidden_dragon.jpg" style="width: 500px;"></img>
 
 !SLIDE
-<img src="hipster.jpg" style="border-radius: 10px"></img>
+## coworker
+<img src="hipster.jpg"></img>
 
 !SLIDE
 <pre class="xlarge">
