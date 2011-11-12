@@ -45,6 +45,12 @@ johnbender.github.com/presentation-jsfunctors/
 <span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> f b
 </pre>
 
+!SLIDE typeclass
+<pre>
+<span class="keyword">class</span> <span class="type">Functor</span> <b>f</b> <span class="keyword">where</span>
+<span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> f b
+</pre>
+
 !SLIDE highlighted-typeclass
 <pre>
 <b>class Functor f where</b>
@@ -478,6 +484,49 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
     <span class="keyword">var</span> <span class="variable-name">b</span>;
 
     <span class="comment">// if a is visible skip the action
+</span>    b = a.is(":visible") ? <b>a</b> : fromAtoB(a);
+
+    <span class="comment">// re-wrap
+</span>    <span class="keyword">return</span> <span class="keyword">new</span> self.constructor(b);
+  };
+
+  self.<span class="function-name">hide</span> = <span class="keyword">function</span>(){
+    a.hide();
+    <span class="keyword">return</span> self;
+  };
+};
+</pre>
+!SLIDE
+<pre class="xlarge">
+<span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
+  <span class="keyword">var</span> <span class="variable-name"><span class="js2-warning">a</span></span> = a, <span class="variable-name">self</span> = <span class="builtin">this</span>;
+
+  self.<span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAtoB</span>){
+    <span class="keyword">var</span> <span class="variable-name">b</span>;
+
+    <span class="comment">// if a is visible skip the action
+</span>    b = a.is(":visible") ? a : <b>fromAtoB(a)</b>;
+
+    <span class="comment">// re-wrap
+</span>    <span class="keyword">return</span> <span class="keyword">new</span> self.constructor(b);
+  };
+
+  self.<span class="function-name">hide</span> = <span class="keyword">function</span>(){
+    a.hide();
+    <span class="keyword">return</span> self;
+  };
+};
+</pre>
+
+!SLIDE
+<pre class="xlarge">
+<span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
+  <span class="keyword">var</span> <span class="variable-name"><span class="js2-warning">a</span></span> = a, <span class="variable-name">self</span> = <span class="builtin">this</span>;
+
+  self.<span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAtoB</span>){
+    <span class="keyword">var</span> <span class="variable-name">b</span>;
+
+    <span class="comment">// if a is visible skip the action
 </span>    b = a.is(":visible") ? a : fromAtoB(a);
 
     <span class="comment">// re-wrap
@@ -667,7 +716,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
   <b>.fmap(destroy)</b>;</pre>
 
 !SLIDE bullets
-## protection
+# srsly
 
 !SLIDE bullets
 ## thanks!
