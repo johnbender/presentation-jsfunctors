@@ -130,7 +130,15 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content highlighted-typeclass" ref="one/01_slide/12">
+</div><div class="slide" data-transition="none"><div class="content typeclass" ref="one/01_slide/12">
+<pre>
+<span class="keyword">class</span> <span class="type">Functor</span> <b>f</b> <span class="keyword">where</span>
+<span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> f b
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content highlighted-typeclass" ref="one/01_slide/13">
 <pre>
 <b>class Functor f where</b>
 <span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> f b
@@ -138,83 +146,83 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content without-declaration" ref="one/01_slide/13">
+</div><div class="slide" data-transition="none"><div class="content without-declaration" ref="one/01_slide/14">
 <pre>
 <span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> f b
 </pre>
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content highlighted-args" ref="one/01_slide/14">
+</div><div class="slide" data-transition="none"><div class="content highlighted-args" ref="one/01_slide/15">
 <pre>
 <span class="function-name">fmap</span> <span class="variable-name">::</span> <b>(a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a</b> <span class="variable-name">-&gt;</span> f b
 </pre>
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content highlighted-return" ref="one/01_slide/15">
+</div><div class="slide" data-transition="none"><div class="content highlighted-return" ref="one/01_slide/16">
 <pre>
 <span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> <b>f b</b>
 </pre>
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content highlighted-function-arg" ref="one/01_slide/16">
+</div><div class="slide" data-transition="none"><div class="content highlighted-function-arg" ref="one/01_slide/17">
 <pre>
 <span class="function-name">fmap</span> <span class="variable-name">::</span> <b>(a -&gt; b)</b> <span class="variable-name">-&gt;</span> f a <span class="variable-name">-&gt;</span> f b
 </pre>
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/17">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/18">
 <pre>
 <span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> <b>f a</b> <span class="variable-name">-&gt;</span> f b
 </pre>
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/18">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/19">
 <pre>
 <span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> <b>f</b> a <span class="variable-name">-&gt;</span> <b>f</b> b
 </pre>
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/19">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/20">
 <pre class="medium">
 <span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> functor a <span class="variable-name">-&gt;</span> functor b
 </pre>
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/20">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/21">
 <pre class="medium">
 <span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> functor(a) <span class="variable-name">-&gt;</span> functor(b)
 </pre>
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/21">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/22">
 <pre class="medium">
 <span class="function-name">fmap</span> <span class="variable-name">::</span> (<b>a</b> <span class="variable-name">-&gt;</span> b) <span class="variable-name">-&gt;</span> functor(<b>a</b>) <span class="variable-name">-&gt;</span> functor(b)
 </pre>
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/22">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/23">
 <pre class="medium">
 <span class="function-name">fmap</span> <span class="variable-name">::</span> (a <span class="variable-name">-&gt;</span> <b>b</b>) <span class="variable-name">-&gt;</span> functor(a) <span class="variable-name">-&gt;</span> functor(<b>b</b>)
 </pre>
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/01_slide/23">
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/01_slide/24">
 <h2>simple &amp; general</h2></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/24">
-<p><img src="./file/one/questionmark.png"/></p></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/25">
-<h1>javascript functor</h1></div>
+<p><img src="./file/one/questionmark.png"/></p></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/26">
+<h1>javascript functor</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/27">
 <pre>
 <span class="comment">// ( a -&gt; b )
 </span><span class="keyword">var</span> <span class="function-name">fromAtoB</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
@@ -225,7 +233,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/27">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/28">
 <pre class="large">
 <span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; f b
 </span><span class="keyword">var</span> <span class="variable-name">wrappedB</span> = fmap(fromAtoB, <span class="keyword">new</span> Functor(a));
@@ -233,7 +241,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/28">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/29">
 <pre class="large">
 <span class="comment">// fmap :: <b>( a -&gt; b )</b> -&gt; f a -&gt; f b
 </span><span class="keyword">var</span> <span class="variable-name">wrappedB</span> = fmap(<b>fromAtoB</b>, <span class="keyword">new</span> Functor(a));
@@ -241,7 +249,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/29">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/30">
 <pre class="large">
 <span class="comment">// fmap :: ( a -&gt; b ) -&gt; <b>f a</b> -&gt; f b
 </span><span class="keyword">var</span> <span class="variable-name">wrappedB</span> = fmap(fromAtoB, <b><span class="keyword">new</span> Functor(a)</b>);
@@ -249,7 +257,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/30">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/31">
 <pre class="large">
 <span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; <b>f b</b>
 </span><span class="keyword">var</span> <b><span class="variable-name">wrappedB</span></b> = fmap(fromAtoB, <span class="keyword">new</span> Functor(a));
@@ -257,7 +265,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/31">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/32">
 <pre class="large">
 <span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; f b</span>
 <span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
@@ -275,7 +283,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/32">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/33">
 <pre class="large">
 <span class="comment">// fmap :: ( a -&gt; b ) -&gt; <b>f a</b> -&gt; f b</span>
 <span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param"><b>wrappedA</b></span>){
@@ -293,7 +301,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/33">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/34">
 <pre class="large">
 <span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; f b</span>
 <span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
@@ -311,7 +319,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/34">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/35">
 <pre class="large">
 <span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; f b</span>
 <span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
@@ -329,7 +337,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/35">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/36">
 <pre class="large">
 <span class="comment">// fmap :: ( <b>a</b> -&gt; b ) -&gt; f a -&gt; f b</span>
 <span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
@@ -347,7 +355,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/36">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/37">
 <pre class="large">
 <span class="comment">// fmap :: ( a -&gt; <b>b</b> ) -&gt; f a -&gt; f b</span>
 <span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
@@ -365,7 +373,7 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/37">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/38">
 <pre class="large">
 <span class="comment">// fmap :: ( a -&gt; b ) -&gt; f a -&gt; <b>f b</b></span>
 <span class="keyword">var</span> <span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAToB</span>, <span class="js2-function-param">wrappedA</span>){
@@ -383,11 +391,11 @@
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/38">
-<p><img src="./file/one/questionmark.png"/></p></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/39">
-<h1>jQuery's functor</h1></div>
+<p><img src="./file/one/questionmark.png"/></p></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/40">
+<h1>jQuery's functor</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/41">
 <pre>
 <span class="comment">// jQuery :: String -&gt; jQuery(a) </span>
 jQuery( <span class="string">"div.selectorific"</span> )
@@ -395,7 +403,7 @@ jQuery( <span class="string">"div.selectorific"</span> )
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/41">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/42">
 <pre>
 <span class="comment">// jQuery :: String -&gt; jQuery(<b>a</b>) </span>
 jQuery( <span class="string">"div.selectorific"</span> )
@@ -403,27 +411,16 @@ jQuery( <span class="string">"div.selectorific"</span> )
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/42">
-<h2>jQuery &#x2248; Functor</h2></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/43">
-<h2>a :: HTMLElement</h2></div>
+<h2>jQuery &#x2248; Functor</h2></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/44">
-<h2>fmap?</h2></div>
+<h2>a :: HTMLElement</h2></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/45">
-<pre class="medium">
-<span class="comment">// rewraps altered HTMLElements for chaining</span>
-$( <span class="string">"div"</span> ).map( <span class="keyword">function</span>( <span class="js2-function-param">i</span>, <span class="js2-function-param">elem</span> ){
-  <span class="comment">// elem :: HTMLElement
-</span>  <span class="keyword">return</span> elem;
-});
-</pre>
-
-
-</div>
+<h2>fmap?</h2></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/46">
 <pre class="medium">
 <span class="comment">// rewraps altered HTMLElements for chaining</span>
-$( <span class="string">"div"</span> ).<b>map</b>( <span class="keyword">function</span>( <span class="js2-function-param">i</span>, <span class="js2-function-param">elem</span> ){
+$( <span class="string">"div"</span> ).map( <span class="keyword">function</span>( <span class="js2-function-param">i</span>, <span class="js2-function-param">elem</span> ){
   <span class="comment">// elem :: HTMLElement
 </span>  <span class="keyword">return</span> elem;
 });
@@ -434,6 +431,17 @@ $( <span class="string">"div"</span> ).<b>map</b>( <span class="keyword">functio
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/47">
 <pre class="medium">
 <span class="comment">// rewraps altered HTMLElements for chaining</span>
+$( <span class="string">"div"</span> ).<b>map</b>( <span class="keyword">function</span>( <span class="js2-function-param">i</span>, <span class="js2-function-param">elem</span> ){
+  <span class="comment">// elem :: HTMLElement
+</span>  <span class="keyword">return</span> elem;
+});
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/48">
+<pre class="medium">
+<span class="comment">// rewraps altered HTMLElements for chaining</span>
 $( <span class="string">"div"</span> ).map( <span class="keyword">function</span>( <span class="js2-function-param">i</span>, <span class="js2-function-param">elem</span> ){
   <span class="comment">// elem :: <b>HTMLElement</b>
 </span>  <span class="keyword">return</span> elem;
@@ -442,7 +450,7 @@ $( <span class="string">"div"</span> ).map( <span class="keyword">function</span
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/48">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/49">
 <pre class="medium">
 <span class="comment">// $.map :: f a -&gt; (a -&gt; b) -&gt; f b</span>
 $.map($(<span class="string">"div"</span>), <span class="keyword">function</span>( <span class="js2-function-param">elem</span> ) {
@@ -452,7 +460,7 @@ $.map($(<span class="string">"div"</span>), <span class="keyword">function</span
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/49">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/50">
 <pre class="medium">
 <span class="comment">// $.map :: f a -&gt; (a -&gt; b) -&gt; f b</span>
 $.<b>map</b>($(<span class="string">"div"</span>), <span class="keyword">function</span>( <span class="js2-function-param">elem</span> ) {
@@ -462,7 +470,7 @@ $.<b>map</b>($(<span class="string">"div"</span>), <span class="keyword">functio
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/50">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/51">
 <pre class="medium">
 <span class="comment">// $.fmap :: f a -&gt; (a -&gt; b) -&gt; f b</span>
 $.<b>fmap</b>($(<span class="string">"div"</span>), <span class="keyword">function</span>( <span class="js2-function-param">elem</span> ) {
@@ -473,7 +481,7 @@ $.<b>fmap</b>($(<span class="string">"div"</span>), <span class="keyword">functi
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/51">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/52">
 <pre class="medium">
 <span class="comment">// $.fmap :: <b>f a -&gt; (a -&gt; b) -&gt; f b</b></span>
 $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</span>( <span class="js2-function-param">elem</span> ) {
@@ -484,19 +492,19 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/52">
-<h2>everyday</h2></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/53">
-<p><img src="./file/one/questionmark.png"/></p></div>
+<h2>everyday</h2></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/54">
+<p><img src="./file/one/questionmark.png"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/55">
 <h1>hidden functor</h1>
 
 <p><img src="./file/one/hidden_dragon.jpg" style="height: 390px;"/></p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/55">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/56">
 <h2>coworker</h2>
 
 <p><img src="./file/one/hipster.jpg"/></p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/56">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/57">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
   <span class="keyword">var</span> <span class="variable-name"><span class="js2-warning">a</span></span> = a, <span class="variable-name">self</span> = <span class="builtin">this</span>;
@@ -520,7 +528,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/57">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/58">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param"><b>a</b></span>){
   <span class="keyword">var</span> <span class="variable-name"><b><span class="js2-warning">a</span></b> = a</span>, <span class="variable-name">self</span> = <span class="builtin">this</span>;
@@ -544,7 +552,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/58">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/59">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
   <span class="keyword">var</span> <span class="variable-name"><span class="js2-warning">a</span></span> = a, <span class="variable-name">self</span> = <span class="builtin">this</span>;
@@ -568,7 +576,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/59">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/60">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
   <span class="keyword">var</span> <span class="variable-name"><span class="js2-warning">a</span></span> = a, <span class="variable-name">self</span> = <span class="builtin">this</span>;
@@ -592,7 +600,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/60">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/61">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
   <span class="keyword">var</span> <span class="variable-name"><span class="js2-warning">a</span></span> = a, <span class="variable-name">self</span> = <span class="builtin">this</span>;
@@ -616,7 +624,53 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/61">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/62">
+<pre class="xlarge">
+<span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
+  <span class="keyword">var</span> <span class="variable-name"><span class="js2-warning">a</span></span> = a, <span class="variable-name">self</span> = <span class="builtin">this</span>;
+
+  self.<span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAtoB</span>){
+    <span class="keyword">var</span> <span class="variable-name">b</span>;
+
+    <span class="comment">// if a is visible skip the action
+</span>    b = a.is(":visible") ? <b>a</b> : fromAtoB(a);
+
+    <span class="comment">// re-wrap
+</span>    <span class="keyword">return</span> <span class="keyword">new</span> self.constructor(b);
+  };
+
+  self.<span class="function-name">hide</span> = <span class="keyword">function</span>(){
+    a.hide();
+    <span class="keyword">return</span> self;
+  };
+};
+</pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/63">
+<pre class="xlarge">
+<span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
+  <span class="keyword">var</span> <span class="variable-name"><span class="js2-warning">a</span></span> = a, <span class="variable-name">self</span> = <span class="builtin">this</span>;
+
+  self.<span class="function-name">fmap</span> = <span class="keyword">function</span>(<span class="js2-function-param">fromAtoB</span>){
+    <span class="keyword">var</span> <span class="variable-name">b</span>;
+
+    <span class="comment">// if a is visible skip the action
+</span>    b = a.is(":visible") ? a : <b>fromAtoB(a)</b>;
+
+    <span class="comment">// re-wrap
+</span>    <span class="keyword">return</span> <span class="keyword">new</span> self.constructor(b);
+  };
+
+  self.<span class="function-name">hide</span> = <span class="keyword">function</span>(){
+    a.hide();
+    <span class="keyword">return</span> self;
+  };
+};
+</pre>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/64">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
   <span class="keyword">var</span> <span class="variable-name"><span class="js2-warning">a</span></span> = a, <span class="variable-name">self</span> = <span class="builtin">this</span>;
@@ -640,7 +694,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/62">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/65">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="function-name">HiddenFunctor</span> = <span class="keyword">function</span>(<span class="js2-function-param">a</span>){
   <span class="keyword">var</span> <span class="variable-name"><span class="js2-warning">a</span></span> = a, <span class="variable-name">self</span> = <span class="builtin">this</span>;
@@ -664,7 +718,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/63">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/66">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="variable-name">functor</span> = <span class="keyword">new</span> HiddenFunctor( $(<span class="string">"#dialog"</span>) );
 
@@ -685,7 +739,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/64">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/67">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="variable-name">functor</span> = <span class="keyword">new</span> HiddenFunctor( <b>$("#dialog")</b> );
 
@@ -706,7 +760,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/65">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/68">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="variable-name">functor</span> = <span class="keyword">new</span> HiddenFunctor( $(<span class="string">"#dialog"</span>) );
 
@@ -727,7 +781,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/66">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/69">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="variable-name">functor</span> = <span class="keyword">new</span> HiddenFunctor( $(<span class="string">"#dialog"</span>) );
 
@@ -748,7 +802,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/67">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/70">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="variable-name">functor</span> = <span class="keyword">new</span> HiddenFunctor( $(<span class="string">"#dialog"</span>) );
 
@@ -769,7 +823,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/68">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/71">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="variable-name">functor</span> = <span class="keyword">new</span> HiddenFunctor( $(<span class="string">"#dialog"</span>) );
 
@@ -790,7 +844,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/69">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/72">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="variable-name">functor</span> = <span class="keyword">new</span> HiddenFunctor( $(<span class="string">"#dialog"</span>) );
 
@@ -811,7 +865,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/70">
+</div><div class="slide" data-transition="none"><div class="content" ref="one/01_slide/73">
 <pre class="xlarge">
 <span class="keyword">var</span> <span class="variable-name">functor</span> = <span class="keyword">new</span> HiddenFunctor( $(<span class="string">"#dialog"</span>) );
 
@@ -832,9 +886,9 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 
 </div>
-</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/01_slide/71">
-<h2>protection</h2></div>
-</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/01_slide/72">
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/01_slide/74">
+<h1>srsly</h1></div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/01_slide/75">
 <h2>thanks!</h2>
 
 <ul>
