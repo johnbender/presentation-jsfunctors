@@ -285,6 +285,7 @@ jQuery( <span class="string">"div.selectorific"</span> )
 
 !SLIDE
 <pre class="medium">
+<span class="comment">// rewraps altered HTMLElements for chaining</span>
 $( <span class="string">"div"</span> ).map( <span class="keyword">function</span>( <span class="js2-function-param">i</span>, <span class="js2-function-param">elem</span> ){
   <span class="comment">// elem :: HTMLElement
 </span>  <span class="keyword">return</span> elem;
@@ -293,6 +294,7 @@ $( <span class="string">"div"</span> ).map( <span class="keyword">function</span
 
 !SLIDE
 <pre class="medium">
+<span class="comment">// rewraps altered HTMLElements for chaining</span>
 $( <span class="string">"div"</span> ).<b>map</b>( <span class="keyword">function</span>( <span class="js2-function-param">i</span>, <span class="js2-function-param">elem</span> ){
   <span class="comment">// elem :: HTMLElement
 </span>  <span class="keyword">return</span> elem;
@@ -301,6 +303,7 @@ $( <span class="string">"div"</span> ).<b>map</b>( <span class="keyword">functio
 
 !SLIDE
 <pre class="medium">
+<span class="comment">// rewraps altered HTMLElements for chaining</span>
 $( <span class="string">"div"</span> ).map( <span class="keyword">function</span>( <span class="js2-function-param">i</span>, <span class="js2-function-param">elem</span> ){
   <span class="comment">// elem :: <b>HTMLElement</b>
 </span>  <span class="keyword">return</span> elem;
@@ -343,11 +346,14 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 </pre>
 
 !SLIDE
+## everyday
+
+!SLIDE
 <img src="questionmark.png"></img>
 
 !SLIDE
 # hidden functor
-<img src="hidden_dragon.jpg" style="width: 500px;"></img>
+<img src="hidden_dragon.jpg" style="height: 390px;"></img>
 
 !SLIDE
 ## coworker
@@ -528,7 +534,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
 
 !SLIDE
 <pre class="xlarge">
-<span class="keyword">var</span> <span class="variable-name">functor</span> = <span class="keyword">new</span> HiddenFunctor( <b>$(<span class="string">"#dialog"</span>)</b> );
+<span class="keyword">var</span> <span class="variable-name">functor</span> = <span class="keyword">new</span> HiddenFunctor( <b>$("#dialog")</b> );
 
 <span class="keyword">function</span> <span class="function-name">show</span>( <span class="js2-function-param">$dialog</span> ){
   <span class="keyword">return</span> $dialog.show();
@@ -661,7 +667,7 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
   <b>.fmap(destroy)</b>;</pre>
 
 !SLIDE bullets
-<img src="pie.jpg" style="max-height: 400px"></img>
+## protection
 
 !SLIDE bullets
 ## thanks!
