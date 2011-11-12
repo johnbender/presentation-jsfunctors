@@ -62,15 +62,6 @@ span.monospace {
   font-size: 1.5em;
 }
 
-#jackie {
-  opacity: 0;
-}
-
-#jackie.opacity-animation {
-  -moz-transition: opacity 2s linear;
-	opacity: 1;
-}
-
 .content.intro h3 {
   font-size: 3.01em;
 }
