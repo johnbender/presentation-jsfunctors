@@ -14,8 +14,8 @@ johnbender.github.com/presentation-jsfunctors/
 
 !SLIDE bullets
 ## projects
-* <img src="jquery-logo.png" style="max-height: 100px"></img>
-* <img src="vagrant_chilling.png" style="max-height: 250px;"></img>
+* <img src="jquery-logo.png" style="max-height: 90px"></img>
+* <img src="vagrant_chilling.png" style="max-height: 220px;"></img>
 
 !SLIDE
 # why?
@@ -25,16 +25,12 @@ johnbender.github.com/presentation-jsfunctors/
 <img src="male-baldness.gif" style="height: 350px;"></img>
 
 !SLIDE
-## practical
-<img src="digging.gif" style="height: 350px;"></img>
-
-!SLIDE
 ## tricks
 <img src="feynman.jpg" style="height: 350px"></img>
 
 !SLIDE
 # disclaimer
-<img src="warning.jpg" style="height: 300px;"></img>
+<img src="warning.jpg" style="height: 250px;"></img>
 
 !SLIDE
 # haskell functor
@@ -280,11 +276,9 @@ jQuery( <span class="string">"div.selectorific"</span> )
 jQuery( <span class="string">"div.selectorific"</span> )
 </pre>
 
-!SLIDE
+!SLIDE bullets
 ## jQuery ≈ Functor
-
-!SLIDE
-## a :: HTMLElement
+* a :: HTMLElement
 
 !SLIDE
 ## fmap?
@@ -715,12 +709,14 @@ $.fmap($(<span class="string">"div"</span>), <span class="keyword">function</spa
   .hide()
   <b>.fmap(destroy)</b>;</pre>
 
-!SLIDE bullets
-# srsly
+!SLIDE attribution
+<img src="thinkingman.jpg" style="height: 600px;"></img>
+#### http://jonc20.deviantart.com/art/the-thinking-man-178204661
 
 !SLIDE bullets
 ## thanks!
 * @johnbender
 * johnbender.us
 * github.com/johnbender
+
 
