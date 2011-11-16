@@ -277,11 +277,11 @@ jQuery( <span class="string">"div.selectorific"</span> )
 </pre>
 
 !SLIDE bullets
-## jQuery ≈ Functor
+### jQuery ≈ Functor
 * a :: HTMLElement
 
 !SLIDE
-## fmap?
+### fmap?
 
 !SLIDE
 <pre class="medium">
